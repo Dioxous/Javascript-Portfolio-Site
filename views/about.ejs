@@ -1,18 +1,22 @@
 <%- include('partials/header') %>
     <main>
         <div class="px-4 py-5 my-5 text-center"> 
-            <img class="d-block mx-auto mb-4 rounded-circle border border-black border-3 bg-secondary" src="/images/profile-pic.png" alt="profile picture of Jaden Singh" width="125">
+            <img class="d-block mx-auto mb-4 rounded-circle bg-secondary" src="/images/profile-pic.png" alt="profile picture of Jaden Singh" width="125">
             <h1 class="display-5 fw-bold text-body-emphasis">About Me</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead">My name is Jaden Singh and I am a 2nd year student in the Networking and IT Security 
                     program at Ontario Tech University. I am interested in cybersecurity and networking and I enjoy learning 
                     about these topics in detail.</p>
+                    <p class="lead mb-4">Here is a quick video introduction about me:</p>
             </div>
-            <div class="d-block mx-auto">
-                <p class="lead mb-4">Here is a quick video introduction about me:</p>
-                <video class="rounded border border-black border-3 overflow-hidden" width=350 controls poster="/images/about-poster.jpg">
-                    <source src="/videos/about-intro.mp4" type="video/mp4">
-                </video>
+            <div class="col-lg-3 mx-auto">
+                <div class="overflow-hidden border border-secondary border-3 rounded-3">
+                    <div class="ratio ratio-16x9">
+                        <video controls poster="/images/about-poster.jpg">
+                            <source src="/videos/about_intro.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
