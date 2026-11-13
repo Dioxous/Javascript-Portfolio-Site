@@ -1,22 +1,32 @@
 <%- include('partials/header') %>
     <main>
-        <form class="row g-3 needs-validation" novalidate mx-auto>
-            <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" required>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form class="row g-3 needs-validation justify-content-center" novalidate action="mailto:jaden.singh@ontariotechu.net" method="post" enctype="text/plain">
+                        <div class="col-md-4">
+                            <label for="inputFirst" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="inputFirst" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputLast" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="inputLast" required>
+                        </div>
+                        <div class="col-md-8">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" required>
+                        </div>
+                        <div class="col-md-8">
+                            <label for="inputMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
+                        </div>
+                        <div class="col-8">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" required>
-            </div>
-            <div class="col-md-8">
-                <label for="validationCustom03" class="form-label">Message</label>
-                <textarea class="form-control" id="validationCustom03" required></textarea>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
-            </div>
-        </form>
+        </div>
     </main>
     <script>
         (function () {
