@@ -1,5 +1,42 @@
 <%- include('partials/header') %>
-<main>
+    <main>
+        <form class="row g-3 needs-validation" novalidate mx-auto>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" required>
+            </div>
+            <div class="col-md-8">
+                <label for="validationCustom03" class="form-label">Message</label>
+                <textarea class="form-control" id="validationCustom03" required></textarea>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </main>
+    <script>
+        (function () {
+            'use strict'
 
-</main>
-<%- include('partials/footer') %>
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <%- include('partials/footer') %>
